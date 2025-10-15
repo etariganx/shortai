@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Upload Konten - Seri Kucing Oranye Lucu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for week navigation */
+        .week-nav::-webkit-scrollbar {
+            height: 8px;
+        }
+        .week-nav::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .week-nav::-webkit-scrollbar-thumb {
+            background: #fdba74; /* orange-300 */
+            border-radius: 10px;
+        }
+        .week-nav::-webkit-scrollbar-thumb:hover {
+            background: #fb923c; /* orange-400 */
+        }
+        .content-card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-bold text-orange-500">🗓️ Jadwal Upload Konten</h1>
+            <p class="text-xl mt-2 text-gray-600">Seri Kucing Oranye Lucu</p>
+        </header>
+
+        <!-- Week Navigation -->
+        <nav class="mb-8">
+            <h2 class="text-lg font-semibold mb-3 text-center text-gray-700">Pilih Minggu:</h2>
+            <div class="week-nav flex items-center space-x-2 overflow-x-auto pb-4">
+                <% for(let i = 1; i <= 52; i++) { %>
+                    <button 
+                        onclick="showWeek('<%= 'week-' + i %>')" 
+                        id="btn-week-<%= i %>" 
+                        class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 <%= i === 1 ? 'bg-orange-500 text-white shadow' : 'bg-white text-gray-600 hover:bg-orange-100 border' %>">
+                        Minggu <%= i %>
+                    </button>
+                <% } %>
+            </div>
+        </nav>
+
+        <!-- Content Area -->
+        <main id="content-area">
+            <!-- Week 1 Content -->
+            <div id="week-1" class="week-content space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Monday -->
+                    <div class="content-card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-2xl font-bold text-orange-600">SENIN</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium">Tema: "Morning Chaos"</p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-semibold">1️⃣ 08:00 – Cat Monday Madness</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Kucing oranye memulai minggu dengan kekacauan! Satu lompatan, satu kegagalan, dan berjalan angkuh seolah tak terjadi apa-apa. 😂 #FunnyCat #MondayMood</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">2️⃣ 13:00 – Coffee Cat Chronicles</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Kopi pagi jadi runyam... si kucing mengambil alih cangkir dan menolak mengembalikannya! ☕🐾 #CatLife #MorningFails</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">3️⃣ 20:00 – Sleepy Cat Vibes</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Setelah hari yang "berat" tanpa melakukan apa-apa, saatnya tidur siang untuk raja kecil kita. 😴 #CuteCat #LazyMood</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tuesday -->
+                    <div class="content-card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-2xl font-bold text-orange-600">SELASA</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium">Tema: "Animal Rivalry"</p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-semibold">1️⃣ 08:00 – Chicken vs Cat: Round 1</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Kucing oranye menghadapi rivalnya di halaman belakang lagi — kali ini, masalah pribadi. 🥊🐔 #CatVsChicken #FunnyAnimals</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">2️⃣ 13:00 – Cat vs Mirror</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Dia melihat kucing lain di cermin... sekarang perang. 🪞😂 #CatFight #FunnyShorts</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">3️⃣ 20:00 – The Tail Chase Incident</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Ekornya menyerang balik! Sebuah mahakarya kebingungan dan kebanggaan selama 30 detik. 🌀🐱 #CatComedy #LOL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Wednesday -->
+                    <div class="content-card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-2xl font-bold text-orange-600">RABU</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium">Tema: "Food Battle"</p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-semibold">1️⃣ 08:00 – Cat Food War!</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Dua kucing. Satu mangkuk. Tidak ada kedamaian. 🍗😂 #FunnyCats #CatDrama</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">2️⃣ 13:00 – Snack Thief in Action</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Siapa yang mencuri nuget ayam? Petunjuk: dia oranye, berbulu, dan bersalah. 🍗😹 #CatFails #FunnyShorts</p>
+                            </div>
+                             <div>
+                                <p class="font-semibold">3️⃣ 20:00 – Cat Chef Disaster</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Dia mencoba memasak... katakan saja dapurnya tidak selamat. 🔥🐾 #CatCooking #CatFails</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Thursday -->
+                    <div class="content-card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-2xl font-bold text-orange-600">KAMIS</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium">Tema: "Action Mode"</p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-semibold">1️⃣ 08:00 – Cat Boxing Round 3</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Sarung tangan dilepas, cakar di atas! Petinju oranye kembali untuk pertandingan kacau lainnya. 🥊🐱 #CatBoxing #FunnyShorts</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">2️⃣ 13:00 – Cat Parkour Gone Wrong</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Dia pikir dia Spider-Cat. Gravitasi punya rencana lain. 🕸️😂 #CatParkour #CatFails</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">3️⃣ 20:00 – Night Patrol Cat</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Saat dunia tidur, kucing ini menjaga sofa seperti pahlawan. 🌙🐾 #FunnyCat #CatVibes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Friday -->
+                    <div class="content-card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-2xl font-bold text-orange-600">JUMAT</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium">Tema: "Weekend Mood"</p>
+                         <div class="space-y-4">
+                            <div>
+                                <p class="font-semibold">1️⃣ 08:00 – Chill Cat Friday</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Akhir pekan memuat... mode kucing oranye: santai. 💤☀️ #CatChill #WeekendVibes</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">2️⃣ 13:00 – Cat at Work</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Pura-pura bekerja, sebenarnya hanya duduk di laptop lagi. 🖥️😹 #WorkFromHome #FunnyCats</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">3️⃣ 20:00 – Friday Night Meow</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Waktunya berpesta! Kucing ini punya zoomies dan tanpa penyesalan. 🎉🐾 #FunnyPets #CatEnergy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Saturday -->
+                    <div class="content-card bg-white p-6 rounded-xl shadow-md border border-gray-200">
+                        <h3 class="text-2xl font-bold text-orange-600">SABTU</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium">Tema: "Family & Fun"</p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-semibold">1️⃣ 09:00 – Breakfast with Family</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Sarapan keluarga kucing — satu mencuri, satu berbagi, satu mengawasi. 🍽️🐾 #CatFamily #CuteCats</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">2️⃣ 13:00 – Kitten Chaos Hour</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Anak-anak kucing sudah bangun... semoga kekacauan memberkati rumah. 🐱💥 #FunnyKittens #CatMoments</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">3️⃣ 20:00 – Movie Night with Cats</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Popcorn, selimut, dan dengkuran — kombinasi Sabtu yang sempurna. 🍿🐾 #CatLovers #WeekendMood</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sunday -->
+                    <div class="content-card bg-white p-6 rounded-xl shadow-md border border-gray-200 col-span-1 md:col-span-2 lg:col-span-1">
+                        <h3 class="text-2xl font-bold text-orange-600">MINGGU</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-medium">Tema: "Weekly Recap"</p>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="font-semibold">1️⃣ 09:00 – Lazy Sunday Cat</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Tidak ada rapat. Tidak ada rencana. Hanya energi tidur murni. 💤😺 #LazySunday #FunnyCat</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">2️⃣ 13:00 – Best Cat Moments of the Week</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Kompilasi momen kucing terlucu — kekacauan dan kelucuan tanpa henti! 😹✨ #CatCompilation #FunnyShorts</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">3️⃣ 20:00 – Sunday Night Chill</p>
+                                <p class="text-gray-600 text-sm pl-6">Deskripsi: Kucing oranye mengakhiri minggu seperti bos — meregangkan tubuh dan mengabaikan semua orang. 😎🐱 #RelaxingCat #CatMood</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recap & Hack Section -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
+                     <div class="bg-orange-100 p-6 rounded-xl border border-orange-200">
+                        <h3 class="text-xl font-bold text-orange-800 mb-3">🔁 Rekap Ritme Upload</h3>
+                        <ul class="list-disc list-inside space-y-2 text-orange-900">
+                            <li><span class="font-semibold">Pagi:</span> 07:45–08:15 → Dorongan penemuan</li>
+                            <li><span class="font-semibold">Siang:</span> 12:30–13:30 → Interaksi jam makan siang</li>
+                            <li><span class="font-semibold">Malam:</span> 19:30–20:30 → Waktu scroll malam</li>
+                        </ul>
+                    </div>
+                     <div class="bg-emerald-100 p-6 rounded-xl border border-emerald-200">
+                        <h3 class="text-xl font-bold text-emerald-800 mb-3">⚡ Bonus Growth Hack</h3>
+                        <ul class="list-disc list-inside space-y-2 text-emerald-900">
+                            <li>Balas 3–5 komentar pertama dalam 10 menit.</li>
+                            <li>Pin satu komentar lucu (bisa dari akunmu sendiri).</li>
+                            <li>Gunakan *loop ending* di video agar penonton nonton ulang → ini menaikkan *retention rate*.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Placeholder for other weeks -->
+            <% for(let i = 2; i <= 52; i++) { %>
+                <div id="week-<%= i %>" class="week-content hidden text-center py-20">
+                    <div class="bg-white p-10 rounded-xl shadow-lg inline-block">
+                        <h2 class="text-3xl font-bold text-gray-700">Konten Minggu <%= i %></h2>
+                        <p class="text-gray-500 mt-2">Segera hadir! 🐾</p>
+                    </div>
+                </div>
+            <% } %>
+        </main>
+
+    </div>
+
+    <script>
+        // Store the currently active elements
+        let currentActiveButton = document.getElementById('btn-week-1');
+        let currentActiveContent = document.getElementById('week-1');
+
+        function showWeek(weekId) {
+            const newActiveContent = document.getElementById(weekId);
+            const newActiveButton = document.getElementById('btn-' + weekId);
+
+            // If the selected content doesn't exist or is already active, do nothing
+            if (!newActiveContent || newActiveContent === currentActiveContent) {
+                return;
+            }
+
+            // Hide the currently active content
+            if (currentActiveContent) {
+                currentActiveContent.classList.add('hidden');
+            }
+
+            // Style the old button back to default
+            if (currentActiveButton) {
+                currentActiveButton.classList.remove('bg-orange-500', 'text-white', 'shadow');
+                currentActiveButton.classList.add('bg-white', 'text-gray-600', 'hover:bg-orange-100', 'border');
+            }
+
+            // Show the new content
+            newActiveContent.classList.remove('hidden');
+
+            // Style the new button as active
+            newActiveButton.classList.remove('bg-white', 'text-gray-600', 'hover:bg-orange-100', 'border');
+            newActiveButton.classList.add('bg-orange-500', 'text-white', 'shadow');
+            
+            // Scroll the button into view if needed
+            newActiveButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+
+            // Update the current active elements
+            currentActiveContent = newActiveContent;
+            currentActiveButton = newActiveButton;
+        }
+    </script>
+</body>
+</html>
+
