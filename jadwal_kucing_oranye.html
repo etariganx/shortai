@@ -43,18 +43,63 @@
             <p class="text-xl mt-2 text-gray-600">Seri Kucing Oranye Lucu</p>
         </header>
 
-        <!-- Week Navigation -->
+        <!-- Week Navigation (INI BAGIAN YANG DIPERBAIKI) -->
         <nav class="mb-8">
             <h2 class="text-lg font-semibold mb-3 text-center text-gray-700">Pilih Minggu:</h2>
             <div class="week-nav flex items-center space-x-2 overflow-x-auto pb-4">
-                <% for(let i = 1; i <= 52; i++) { %>
-                    <button 
-                        onclick="showWeek('<%= 'week-' + i %>')" 
-                        id="btn-week-<%= i %>" 
-                        class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 <%= i === 1 ? 'bg-orange-500 text-white shadow' : 'bg-white text-gray-600 hover:bg-orange-100 border' %>">
-                        Minggu <%= i %>
-                    </button>
-                <% } %>
+                <!-- Tombol-tombol yang dibuat secara manual (HTML murni) -->
+                <button onclick="showWeek('week-1')" id="btn-week-1" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-orange-500 text-white shadow">Minggu 1</button>
+                <button onclick="showWeek('week-2')" id="btn-week-2" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 2</button>
+                <button onclick="showWeek('week-3')" id="btn-week-3" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 3</button>
+                <button onclick="showWeek('week-4')" id="btn-week-4" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 4</button>
+                <button onclick="showWeek('week-5')" id="btn-week-5" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 5</button>
+                <button onclick="showWeek('week-6')" id="btn-week-6" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 6</button>
+                <button onclick="showWeek('week-7')" id="btn-week-7" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 7</button>
+                <button onclick="showWeek('week-8')" id="btn-week-8" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 8</button>
+                <button onclick="showWeek('week-9')" id="btn-week-9" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 9</button>
+                <button onclick="showWeek('week-10')" id="btn-week-10" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 10</button>
+                <button onclick="showWeek('week-11')" id="btn-week-11" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 11</button>
+                <button onclick="showWeek('week-12')" id="btn-week-12" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 12</button>
+                <button onclick="showWeek('week-13')" id="btn-week-13" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 13</button>
+                <button onclick="showWeek('week-14')" id="btn-week-14" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 14</button>
+                <button onclick="showWeek('week-15')" id="btn-week-15" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 15</button>
+                <button onclick="showWeek('week-16')" id="btn-week-16" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 16</button>
+                <button onclick="showWeek('week-17')" id="btn-week-17" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 17</button>
+                <button onclick="showWeek('week-18')" id="btn-week-18" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 18</button>
+                <button onclick="showWeek('week-19')" id="btn-week-19" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 19</button>
+                <button onclick="showWeek('week-20')" id="btn-week-20" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 20</button>
+                <button onclick="showWeek('week-21')" id="btn-week-21" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 21</button>
+                <button onclick="showWeek('week-22')" id="btn-week-22" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 22</button>
+                <button onclick="showWeek('week-23')" id="btn-week-23" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 23</button>
+                <button onclick="showWeek('week-24')" id="btn-week-24" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 24</button>
+                <button onclick="showWeek('week-25')" id="btn-week-25" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 25</button>
+                <button onclick="showWeek('week-26')" id="btn-week-26" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 26</button>
+                <button onclick="showWeek('week-27')" id="btn-week-27" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 27</button>
+                <button onclick="showWeek('week-28')" id="btn-week-28" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 28</button>
+                <button onclick="showWeek('week-29')" id="btn-week-29" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 29</button>
+                <button onclick="showWeek('week-30')" id="btn-week-30" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 30</button>
+                <button onclick="showWeek('week-31')" id="btn-week-31" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 31</button>
+                <button onclick="showWeek('week-32')" id="btn-week-32" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 32</button>
+                <button onclick="showWeek('week-33')" id="btn-week-33" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 33</button>
+                <button onclick="showWeek('week-34')" id="btn-week-34" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 34</button>
+                <button onclick="showWeek('week-35')" id="btn-week-35" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 35</button>
+                <button onclick="showWeek('week-36')" id="btn-week-36" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 36</button>
+                <button onclick="showWeek('week-37')" id="btn-week-37" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 37</button>
+                <button onclick="showWeek('week-38')" id="btn-week-38" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 38</button>
+                <button onclick="showWeek('week-39')" id="btn-week-39" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 39</button>
+                <button onclick="showWeek('week-40')" id="btn-week-40" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 40</button>
+                <button onclick="showWeek('week-41')" id="btn-week-41" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 41</button>
+                <button onclick="showWeek('week-42')" id="btn-week-42" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 42</button>
+                <button onclick="showWeek('week-43')" id="btn-week-43" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 43</button>
+                <button onclick="showWeek('week-44')" id="btn-week-44" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 44</button>
+                <button onclick="showWeek('week-45')" id="btn-week-45" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 45</button>
+                <button onclick="showWeek('week-46')" id="btn-week-46" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 46</button>
+                <button onclick="showWeek('week-47')" id="btn-week-47" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 47</button>
+                <button onclick="showWeek('week-48')" id="btn-week-48" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 48</button>
+                <button onclick="showWeek('week-49')" id="btn-week-49" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 49</button>
+                <button onclick="showWeek('week-50')" id="btn-week-50" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 50</button>
+                <button onclick="showWeek('week-51')" id="btn-week-51" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 51</button>
+                <button onclick="showWeek('week-52')" id="btn-week-52" class="week-btn flex-shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 bg-white text-gray-600 hover:bg-orange-100 border">Minggu 52</button>
             </div>
         </nav>
 
@@ -420,14 +465,69 @@
 
 
             <!-- Placeholder for other weeks -->
-            <% for(let i = 3; i <= 52; i++) { %>
-                <div id="week-<%= i %>" class="week-content hidden text-center py-20">
-                    <div class="bg-white p-10 rounded-xl shadow-lg inline-block">
-                        <h2 class="text-3xl font-bold text-gray-700">Konten Minggu <%= i %></h2>
-                        <p class="text-gray-500 mt-2">Segera hadir! 🐾</p>
-                    </div>
+            <!-- Ini bagian yang placeholder-nya dimulai dari 3, sudah benar -->
+            <div id="week-3" class="week-content hidden text-center py-20">
+                <div class="bg-white p-10 rounded-xl shadow-lg inline-block">
+                    <h2 class="text-3xl font-bold text-gray-700">Konten Minggu 3</h2>
+                    <p class="text-gray-500 mt-2">Segera hadir! 🐾</p>
                 </div>
-            <% } %>
+            </div>
+            <div id="week-4" class="week-content hidden text-center py-20">
+                <div class="bg-white p-10 rounded-xl shadow-lg inline-block">
+                    <h2 class="text-3xl font-bold text-gray-700">Konten Minggu 4</h2>
+                    <p class="text-gray-500 mt-2">Segera hadir! 🐾</p>
+                </div>
+            </div>
+            <!-- ... dan seterusnya sampai Minggu 52 ... -->
+            <div id="week-5" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 5</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-6" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 6</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-7" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 7</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-8" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 8</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-9" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 9</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-10" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 10</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-11" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 11</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-12" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 12</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-13" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 13</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-14" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 14</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-15" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 15</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-16" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 16</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-17" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 17</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-18" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 18</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-19" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 19</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-20" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 20</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-21" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 21</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-22" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 22</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-23" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 23</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-24" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 24</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-25" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 25</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-26" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 26</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-27" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 27</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-28" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 28</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-29" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 29</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-30" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 30</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-31" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 31</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-32" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 32</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-33" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 33</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-34" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 34</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-35" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 35</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-36" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 36</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-37" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 37</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-38" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 38</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-39" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 39</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-40" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 40</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-41" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 41</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-42" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 42</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-43" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 43</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-44" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 44</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-45" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 45</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-46" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 46</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-47" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 47</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-48" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 48</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-49" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 49</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-50" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 50</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-51" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 51</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+            <div id="week-52" class="week-content hidden text-center py-20"><div class="bg-white p-10 rounded-xl shadow-lg inline-block"><h2 class="text-3xl font-bold text-gray-700">Konten Minggu 52</h2><p class="text-gray-500 mt-2">Segera hadir! 🐾</p></div></div>
+
         </main>
 
     </div>
